@@ -1,0 +1,15 @@
+<project name="submitServer" default="submission" basedir=".">
+	
+	<property name="submission.name" value="submission.jar"/>
+	
+	<!--
+	Use this target to produce a submission for uploading over the web
+	-->
+	<target name="submission">
+		<jar destfile="${submission.name}" update="false">
+			<fileset dir="."
+				includes="src/**/*java"/>
+		</jar>
+	</target>
+	
+</project>
